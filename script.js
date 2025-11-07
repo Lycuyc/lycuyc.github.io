@@ -12,6 +12,7 @@ function solveQuadratic() {
         return;
     }
 
+    // Здесь можно использовать <br> для HTML-вывода
     result += `Дано квадратное уравнение: ${a}x² + ${b}x + ${c} = 0<br>`;
 
     if (a === 0) {
@@ -21,6 +22,8 @@ function solveQuadratic() {
     }
 
     let D = b * b - 4 * a * c;
+    
+    // Используем <b> для жирного шрифта и <br> для переноса строк
     result += `<br><b>Шаг 1: Вычисляем дискриминант (D):</b><br>`;
     result += `Формула: D = b² - 4ac<br>`;
     result += `Подстановка: D = (${b})² - 4 * (${a}) * (${c})<br>`;
@@ -70,5 +73,6 @@ function solveQuadratic() {
         result += "--- <br>аутпут \"net korney\" (Нет действительных корней)";
     }
     
+    // ГЛАВНОЕ ИЗМЕНЕНИЕ: Используем innerHTML для обработки HTML-тегов
     outputElement.innerHTML = result;
 }
