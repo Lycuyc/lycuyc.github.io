@@ -8,7 +8,7 @@ function solveQuadratic() {
     
     if (isNaN(a) || isNaN(b) || isNaN(c)) {
         result = "Ошибка: Введите числовые значения для a, b и c.";
-        outputElement.innerHTML = result; // Используем innerHTML
+        outputElement.innerHTML = result;
         return;
     }
 
@@ -16,7 +16,7 @@ function solveQuadratic() {
 
     if (a === 0) {
         result += "Ошибка: Коэффициент 'a' не может быть равен нулю для квадратного уравнения.";
-        outputElement.innerHTML = result; // Используем innerHTML
+        outputElement.innerHTML = result;
         return;
     }
 
@@ -70,5 +70,5 @@ function solveQuadratic() {
         result += "--- <br>аутпут \"net korney\" (Нет действительных корней)";
     }
     
-    outputElement.innerHTML = result; // ГЛАВНОЕ ИЗМЕНЕНИЕ
+    outputElement.innerHTML = result;
 }
