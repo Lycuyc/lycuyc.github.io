@@ -21,56 +21,54 @@ function solveQuadratic() {
     }
 
     let D = b * b - 4 * a * c;
-    result += "Шаг 1: Вычисляем дискриминант (D):\n";
-    result += `D = b² - 4ac\n`;
-    result += `D = (${b})² - 4 * (${a}) * (${c})\n`;
-    result += `D = ${b*b} - ${4 * a * c}\n`;
-    result += `D = ${D.toFixed(4)}\n\n`;
+    result += "\n**Шаг 1: Вычисляем дискриминант (D):**\n";
+    result += `Формула: D = b² - 4ac\n`;
+    result += `Подстановка: D = (${b})² - 4 * (${a}) * (${c})\n`;
+    result += `Расчет: D = ${b*b} - ${4 * a * c}\n`;
+    result += `**D = ${D.toFixed(4)}**\n`;
 
-    result += "Шаг 2: Анализ дискриминанта:\n";
+    result += "\n**Шаг 2: Анализ дискриминанта и нахождение корней:**\n";
 
     if (D > 0) {
-        result += `Так как D > 0, уравнение имеет 2 различных действительных корня (est 2 kornya).\n`;
-        result += `Используем формулу корней: x₁,₂ = (-b ± √D) / (2a)\n\n`;
+        result += `Так как D > 0, уравнение имеет **2 различных действительных корня**.\n`;
+        result += `Формула корней: x₁,₂ = (-b ± √D) / (2a)\n\n`;
             
         let sqrtD = Math.sqrt(D);
         let x1 = (-b + sqrtD) / (2 * a);
         let x2 = (-b - sqrtD) / (2 * a);
             
-        result += `Вычисление x₁:\n`;
-        result += `x₁ = (-(${b}) + √${D.toFixed(4)}) / (2 * ${a})\n`;
-        result += `x₁ = (${-b} + ${sqrtD.toFixed(4)}) / ${2 * a}\n`;
-        result += `x₁ = ${x1.toFixed(4)}\n\n`;
+        result += `> **Корень x₁:**\n`;
+        result += `> x₁ = (-(${b}) + √${D.toFixed(4)}) / (2 * ${a})\n`;
+        result += `> x₁ = (${-b} + ${sqrtD.toFixed(4)}) / ${2 * a}\n`;
+        result += `> **x₁ = ${x1.toFixed(4)}**\n\n`;
         
-        result += `Вычисление x₂:\n`;
-        result += `x₂ = (-(${b}) - √${D.toFixed(4)}) / (2 * ${a})\n`;
-        result += `x₂ = (${-b} - ${sqrtD.toFixed(4)}) / ${2 * a}\n`;
-        result += `x₂ = ${x2.toFixed(4)}\n\n`;
+        result += `> **Корень x₂:**\n`;
+        result += `> x₂ = (-(${b}) - √${D.toFixed(4)}) / (2 * ${a})\n`;
+        result += `> x₂ = (${-b} - ${sqrtD.toFixed(4)}) / ${2 * a}\n`;
+        result += `> **x₂ = ${x2.toFixed(4)}**\n\n`;
         
-        result += `аутпут "est 2 kornya"\n`;
+        result += `--- \nаутпут "est 2 kornya"\n`;
         result += `аутпут x1 = ${x1.toFixed(4)}\n`;
         result += `аутпут x2 = ${x2.toFixed(4)}`; 
         
     } else if (D === 0) {
-        result += `Так как D = 0, уравнение имеет 1 действительный корень (edinstvenniy koren).\n`;
-        result += `Используем формулу корня: x = -b / (2a)\n\n`;
+        result += `Так как D = 0, уравнение имеет **1 действительный корень** (один корень).\n`;
+        result += `Формула корня: x = -b / (2a)\n\n`;
             
         let x = (-b) / (2 * a);
             
-        result += `Вычисление x:\n`;
-        result += `x = -(${b}) / (2 * ${a})\n`;
-        result += `x = ${-b} / ${2 * a}\n`;
-        result += `x = ${x.toFixed(4)}\n\n`;
+        result += `> **Корень x:**\n`;
+        result += `> x = -(${b}) / (2 * ${a})\n`;
+        result += `> x = ${-b} / ${2 * a}\n`;
+        result += `> **x = ${x.toFixed(4)}**\n\n`;
         
-        result += `аутпут "edinstvenniy koren"\n`;
+        result += `--- \nаутпут "edinstvenniy koren"\n`;
         result += `аутпут x = ${x.toFixed(4)}`;
         
     } else { 
-        result += `Так как D < 0, уравнение не имеет действительных корней (net korney).\n\n`;
-        result += "аутпут \"net korney\" (Нет действительных корней)";
+        result += `Так как D < 0, уравнение **не имеет действительных корней**.\n\n`;
+        result += "--- \nаутпут \"net korney\" (Нет действительных корней)";
     }
     
     outputElement.innerText = result;
-}
-
 }
